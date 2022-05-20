@@ -1,0 +1,41 @@
+#forms h1 {
+    margin: 30px 0;
+}
+
+#forms .text-muted {
+    color: red !important;
+    display: none;
+}
+
+#forms .error .text-muted {
+    display: block;
+}
+
+#forms .error input {
+    border-color: red;
+}
+
+#forms button {
+    width: 100%;
+}
+
+#forms .form-grid {
+    padding: 0;
+}
+
+#forms .form-grid .row {
+    margin: 0;
+}
+
+#forms .form-grid .col-12 {
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    #forms .form-grid .col-12:nth-child(1) {
+        padding-right: 5px;
+    }
+    #forms .form-grid .col-12:nth-child(2) {
+        padding-left: 5px;
+    }
+}

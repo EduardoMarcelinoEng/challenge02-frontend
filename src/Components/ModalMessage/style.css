@@ -1,0 +1,28 @@
+:root {
+    --success: #D1E7DD;
+    --error: #F8D7DA;
+}
+
+#modal-message[type="success"] .modal-header {
+    background-color: var(--success)
+}
+
+#modal-message[type="success"] .modal-body {
+    background-color: var(--success);
+}
+
+#modal-message[type="success"] .modal-footer {
+    background-color: var(--success);
+}
+
+#modal-message[type="error"] .modal-header {
+    background-color: var(--error)
+}
+
+#modal-message[type="error"] .modal-body {
+    background-color: var(--error);
+}
+
+#modal-message[type="error"] .modal-footer {
+    background-color: var(--error);
+}
