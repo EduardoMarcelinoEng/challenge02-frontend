@@ -143,6 +143,38 @@ export default function Forms(){
 
     }
 
+    const validAllInput = ()=>{
+
+        let hasError = false;
+
+        if(!valid.email(email.data)){
+            let newObj = email;
+            newObj.isError = true;
+            hasError = true;
+        }
+
+        if(!valid.password(password.data)){
+            let newObj = password;
+            newObj.isError = true;
+            hasError = true;
+        }
+
+        if(password.data !== passwordRepeat.data){
+            let newObj = passwordRepeat;
+            newObj.isError = true;
+            hasError = true;
+        }
+
+        if(!valid.username(username.data)){
+            let newObj = username;
+            newObj.isError = true;
+            hasError = true;
+        }
+
+        return !hasError;
+
+    }
+
     const register = ()=>{
 
         if(!fullname.data || !email.data || !password.data || !username.data || !dateOfBirth.data){
@@ -153,10 +185,10 @@ export default function Forms(){
             });
         }
 
-        if(password.data !== passwordRepeat.data){
+        if(!validAllInput()){
             return setMessages({
                 title: 'Erro ao fazer cadastro',
-                message: 'Senhas não correspondem!',
+                message: 'Há campos com valores inválidos!',
                 type: 'error'
             });
         }
