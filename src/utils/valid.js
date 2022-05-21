@@ -10,7 +10,7 @@ const valid = {
         const arrValue = value.split('');
 
         for(let i = 0; i < arrValue.length && !(hasSpecialCharacteres && hasNumber); i++){
-            if(typeof Number(arrValue[i]) === 'number') hasNumber = true;
+            if(typeof Number(arrValue[i]) !== 'NaN') hasNumber = true;
             if(specialCharacters.split('').includes(arrValue[i])) hasSpecialCharacteres = true;
         }
 
